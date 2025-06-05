@@ -102,6 +102,29 @@ public class tictac {
 
                     }
                 }
+                boolean isdraw=true;
+                for (int i=0;i<gameChance.length;i++){
+                    if (gameChance[i]==2){
+                        isdraw=false;
+
+                        break;
+                    }
+                }
+                if (isdraw && winner==2){
+                    JOptionPane.showMessageDialog(null," It's a draw");
+                    int n=JOptionPane.showConfirmDialog(button, "Do you want to play more? ");
+                        if (n==0){
+                            frame.setVisible(false);
+                            new tictac();
+                        }else if (n==1) {
+                            System.exit(123);
+
+                            
+                        }
+                        else{
+
+                        }
+                }   
 
 
 
